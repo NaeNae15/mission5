@@ -15,16 +15,78 @@ namespace JoelHilton.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "3.1.22");
 
+            modelBuilder.Entity("JoelHilton.Models.Category", b =>
+                {
+                    b.Property<int>("CategoryId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("CategoryName")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("CategoryId");
+
+                    b.ToTable("Categories");
+
+                    b.HasData(
+                        new
+                        {
+                            CategoryId = 1,
+                            CategoryName = "Action/Adeventure"
+                        },
+                        new
+                        {
+                            CategoryId = 2,
+                            CategoryName = "Comedy"
+                        },
+                        new
+                        {
+                            CategoryId = 3,
+                            CategoryName = "Drama"
+                        },
+                        new
+                        {
+                            CategoryId = 4,
+                            CategoryName = "Family"
+                        },
+                        new
+                        {
+                            CategoryId = 5,
+                            CategoryName = "Horror/Suspense"
+                        },
+                        new
+                        {
+                            CategoryId = 6,
+                            CategoryName = "Miscellaneous"
+                        },
+                        new
+                        {
+                            CategoryId = 7,
+                            CategoryName = "Television"
+                        },
+                        new
+                        {
+                            CategoryId = 8,
+                            CategoryName = "VHS"
+                        },
+                        new
+                        {
+                            CategoryId = 9,
+                            CategoryName = "Other"
+                        });
+                });
+
             modelBuilder.Entity("JoelHilton.Models.MovieResponses", b =>
                 {
                     b.Property<int>("MovieId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Category")
-                        .HasColumnType("TEXT");
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Director")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<bool>("Edited")
@@ -36,10 +98,12 @@ namespace JoelHilton.Migrations
                     b.Property<string>("Notes")
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("Rating")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("Rating")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Title")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<int>("Year")
@@ -47,7 +111,61 @@ namespace JoelHilton.Migrations
 
                     b.HasKey("MovieId");
 
+                    b.HasIndex("CategoryId");
+
                     b.ToTable("Responses");
+
+                    b.HasData(
+                        new
+                        {
+                            MovieId = 1,
+                            CategoryId = 1,
+                            Director = "Joss Whedon",
+                            Edited = false,
+                            Rating = "PG-13",
+                            Title = "Avengers, The",
+                            Year = 2012
+                        },
+                        new
+                        {
+                            MovieId = 2,
+                            CategoryId = 2,
+                            Director = "Richard Donner",
+                            Edited = false,
+                            Rating = "PG",
+                            Title = "Maverick",
+                            Year = 1994
+                        },
+                        new
+                        {
+                            MovieId = 3,
+                            CategoryId = 4,
+                            Director = "Chris Columbus",
+                            Edited = false,
+                            Rating = "PG-13",
+                            Title = "Mrs. Doubtfire",
+                            Year = 1993
+                        },
+                        new
+                        {
+                            MovieId = 4,
+                            CategoryId = 1,
+                            Director = "Richard Donner",
+                            Edited = false,
+                            Notes = "Most Quotable",
+                            Rating = "PG-13",
+                            Title = "Ladyhawke",
+                            Year = 1985
+                        });
+                });
+
+            modelBuilder.Entity("JoelHilton.Models.MovieResponses", b =>
+                {
+                    b.HasOne("JoelHilton.Models.Category", "Category")
+                        .WithMany()
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

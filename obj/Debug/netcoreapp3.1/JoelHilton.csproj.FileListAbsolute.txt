@@ -363,9 +363,7 @@
 /Users/janae/Projects/JoelHilton/JoelHilton/obj/Debug/netcoreapp3.1/JoelHilton.RazorCoreGenerate.cache
 /Users/janae/Projects/JoelHilton/JoelHilton/obj/Debug/netcoreapp3.1/Razor/Views/Home/Index.cshtml.g.cs
 /Users/janae/Projects/JoelHilton/JoelHilton/obj/Debug/netcoreapp3.1/Razor/Views/Home/Podcast.cshtml.g.cs
-/Users/janae/Projects/JoelHilton/JoelHilton/obj/Debug/netcoreapp3.1/Razor/Views/Shared/Error.cshtml.g.cs
 /Users/janae/Projects/JoelHilton/JoelHilton/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_Layout.cshtml.g.cs
-/Users/janae/Projects/JoelHilton/JoelHilton/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_ValidationScriptsPartial.cshtml.g.cs
 /Users/janae/Projects/JoelHilton/JoelHilton/obj/Debug/netcoreapp3.1/Razor/Views/_ViewImports.cshtml.g.cs
 /Users/janae/Projects/JoelHilton/JoelHilton/obj/Debug/netcoreapp3.1/Razor/Views/_ViewStart.cshtml.g.cs
 /Users/janae/Projects/JoelHilton/JoelHilton/obj/Debug/netcoreapp3.1/JoelHilton.RazorTargetAssemblyInfo.cache
@@ -376,3 +374,5 @@
 /Users/janae/Projects/JoelHilton/JoelHilton/obj/Debug/netcoreapp3.1/JoelHilton.pdb
 /Users/janae/Projects/JoelHilton/JoelHilton/obj/Debug/netcoreapp3.1/JoelHilton.genruntimeconfig.cache
 /Users/janae/Projects/JoelHilton/JoelHilton/obj/Debug/netcoreapp3.1/Razor/Views/Home/NewMovies.cshtml.g.cs
+/Users/janae/Projects/JoelHilton/JoelHilton/obj/Debug/netcoreapp3.1/Razor/Views/Home/MovieList.cshtml.g.cs
+/Users/janae/Projects/JoelHilton/JoelHilton/obj/Debug/netcoreapp3.1/Razor/Views/Home/Delete.cshtml.g.cs
